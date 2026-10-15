@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/audioCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/settings_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="82dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Audio icon -->
+
+        <ImageView
+            android:id="@+id/ivAudioItemIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_category_videos"
+            android:contentDescription="Audio"
+            android:padding="12dp"
+            android:src="@drawable/ic_audio" />
+
+        <!-- Audio information -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAudioItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:maxLines="1"
+                android:text="Audio file"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAudioItemDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0 MB"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Selection checkbox -->
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkAudio"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:buttonTint="@color/primary"
+            android:contentDescription="Select audio" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

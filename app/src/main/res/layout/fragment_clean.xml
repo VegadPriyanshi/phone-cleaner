@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/screen_background"
+
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:paddingStart="18dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="110dp">
+
+
+        <!-- ================================================= -->
+        <!-- Header -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/tvCleanTitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Clean"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvCleanSubtitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Free up space by clearing files you don't need."
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+
+        <!-- ================================================= -->
+        <!-- Ready To Clean Container -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardReadyToClean"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            app:cardBackgroundColor="@color/clean_ready_card"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/clean_ready_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <!-- Ready Header -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+
+                        android:contentDescription="@null"
+                        android:src="@android:drawable/ic_menu_delete"
+
+                        app:tint="@color/primary" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+
+                        android:text="Ready to clean"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                    <!-- ================================================= -->
+                    <!-- Deselect All -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:id="@+id/tvDeselectAll"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="6dp"
+
+                        android:text="Deselect all"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <!-- Cleanable Size -->
+
+                <TextView
+                    android:id="@+id/tvCleanableSize"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="14dp"
+
+                    android:text="0 GB"
+                    android:textColor="@color/text_primary"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvCleanableDescription"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="2dp"
+
+                    android:text="can be freed across 0 categories"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+
+                <!-- ================================================= -->
+                <!-- Clean Selected -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCleanSelected"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="16dp"
+
+                    android:text="Clean Selected"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_on_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+
+                    app:backgroundTint="@color/clean_primary_button"
+                    app:cornerRadius="14dp"
+                    app:elevation="0dp" />
+
+
+                <!-- ================================================= -->
+                <!-- Scan Now -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCleanScanNow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginTop="10dp"
+
+                    android:text="Scan Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+
+                    app:backgroundTint="@color/clean_secondary_button"
+                    app:cornerRadius="14dp"
+                    app:elevation="0dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- Category Cards -->
+        <!-- ================================================= -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCleanCategories"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

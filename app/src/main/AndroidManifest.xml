@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===================================================== -->
+    <!-- Storage / Media Permissions -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- ===================================================== -->
+    <!-- App / Usage Permissions -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <uses-permission
+        android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <!-- ===================================================== -->
+    <!-- Notifications / Startup / Network -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- ===================================================== -->
+    <!-- Application -->
+    <!-- ===================================================== -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PhoneCleaner">
+
+        <!-- Google Mobile Ads application ID -->
+        <!-- Google's official test application ID -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <!-- ================================================= -->
+        <!-- Splash Activity - APP LAUNCHER -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PhoneCleaner.Starting">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- ================================================= -->
+        <!-- Language Activity -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.language.ui.LanguageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PhoneCleaner.Starting" />
+
+        <!-- ================================================= -->
+        <!-- Main Activity - HOME -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Onboarding -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.onboarding.ui.OnboardingActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Permissions -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".ui.permission.AppPermissionsActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Auto Clean -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.autoclean.AutoCleanScheduleActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Notification Settings -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.notifications.ui.NotificationSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.notifications.ui.LowStorageSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.notifications.ui.UnusedAppsSettingsActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Apps -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".ui.apps.UnusedAppsActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- About -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.about.AboutPhoneCleanerActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Privacy -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".features.privacy.PrivacyPolicyActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- Startup Receiver -->
+        <!-- ================================================= -->
+
+        <receiver
+            android:name=".receiver.StartupReceiver"
+            android:enabled="true"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- ================================================= -->
+        <!-- Cleaning Reminder Receiver -->
+        <!-- ================================================= -->
+
+        <receiver
+            android:name=".features.notifications.receiver.CleaningReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

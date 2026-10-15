@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/appPermissionsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/screen_background">
+
+
+    <!-- ========================================================= -->
+    <!-- Header -->
+    <!-- ========================================================= -->
+
+    <ImageView
+        android:id="@+id/btnBack"
+
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+
+        android:background="?attr/selectableItemBackgroundBorderless"
+
+        android:contentDescription="@null"
+
+        android:padding="10dp"
+
+        android:src="@drawable/ic_arrow_back"
+
+        app:tint="@color/text_primary"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="App permissions"
+
+        android:textColor="@color/text_primary"
+        android:textSize="23sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+
+    <!-- ========================================================= -->
+    <!-- Scroll Content -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="16dp"
+
+        android:clipToPadding="false"
+
+        android:fillViewport="true"
+
+        android:paddingBottom="32dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="32dp">
+
+
+            <!-- ================================================= -->
+            <!-- Description -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Manage the access required by Phone Cleaner features."
+
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+
+            <!-- ================================================= -->
+            <!-- Storage -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
+
+                android:text="Storage"
+
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+
+            <!-- ================================================= -->
+            <!-- Photos and Videos -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardPhotosVideosPermission"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/settings_stroke"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/rowPhotosVideosPermission"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/selectableItemBackground"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="16dp">
+
+
+                    <FrameLayout
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon">
+
+
+                        <ImageView
+                            android:id="@+id/iconPhotosVideosPermission"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:padding="10dp"
+
+                            android:src="@drawable/ic_permission_photo"
+
+                            android:contentDescription="@null"
+
+                            app:tint="@color/primary" />
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Photos and videos"
+
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/valuePhotosVideosPermission"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+
+                            android:text="Not allowed"
+
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchPhotosVideosPermission"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="false"
+                        android:focusable="false"
+
+                        android:checked="false"
+
+                        app:thumbTint="@color/primary"
+                        app:trackTint="@color/settings_stroke" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- Music and Audio -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardAudioPermission"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/settings_stroke"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/rowAudioPermission"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/selectableItemBackground"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="16dp">
+
+
+                    <FrameLayout
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon">
+
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:padding="10dp"
+
+                            android:src="@drawable/ic_permission_audio"
+
+                            android:contentDescription="@null"
+
+                            app:tint="@color/primary" />
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Music and audio"
+
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/valueAudioPermission"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+
+                            android:text="Not allowed"
+
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAudioPermission"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="false"
+                        android:focusable="false"
+
+                        android:checked="false"
+
+                        app:thumbTint="@color/primary"
+                        app:trackTint="@color/settings_stroke" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- All Files Access -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardAllFilesPermission"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/settings_stroke"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/rowAllFilesPermission"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/selectableItemBackground"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="16dp">
+
+
+                    <FrameLayout
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon">
+
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:padding="10dp"
+
+                            android:src="@drawable/ic_permission_storage"
+
+                            android:contentDescription="@null"
+
+                            app:tint="@color/primary" />
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="All files access"
+
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/valueAllFilesPermission"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+
+                            android:text="Not allowed"
+
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAllFilesPermission"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="false"
+                        android:focusable="false"
+
+                        android:checked="false"
+
+                        app:thumbTint="@color/primary"
+                        app:trackTint="@color/settings_stroke" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- Special Access -->
+            <!-- ================================================= -->
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
+
+                android:text="Special access"
+
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+
+            <!-- ================================================= -->
+            <!-- Usage Access -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/cardUsagePermission"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/settings_stroke"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/rowUsagePermission"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="?attr/selectableItemBackground"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="16dp">
+
+
+                    <FrameLayout
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon">
+
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:padding="10dp"
+
+                            android:src="@drawable/ic_permission_usage"
+
+                            android:contentDescription="@null"
+
+                            app:tint="@color/primary" />
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Usage access"
+
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/valueUsagePermission"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+
+                            android:text="Not allowed"
+
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchUsagePermission"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="false"
+                        android:focusable="false"
+
+                        android:checked="false"
+
+                        app:thumbTint="@color/primary"
+                        app:trackTint="@color/settings_stroke" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

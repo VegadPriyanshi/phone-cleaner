@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+    <!-- ========================= -->
+    <!-- Header -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:id="@+id/duplicatePhotosHeader"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnDuplicatePhotosBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="4dp">
+
+            <TextView
+                android:id="@+id/tvDuplicatePhotosTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duplicate Photos"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDuplicatePhotosSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0 groups • 0 MB"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ========================= -->
+    <!-- Selection Bar -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:id="@+id/duplicatePhotosSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvDuplicatePhotoSelectionCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 selected"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvDuplicatePhotoSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text="Select all"
+            android:textColor="@color/primary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <!-- ========================= -->
+    <!-- Duplicate Groups -->
+    <!-- ========================= -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDuplicatePhotos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical" />
+
+
+    <!-- ========================= -->
+    <!-- Empty State -->
+    <!-- ========================= -->
+
+    <LinearLayout
+        android:id="@+id/emptyDuplicatePhotosState"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_category_photos"
+            android:contentDescription="@null"
+            android:padding="18dp"
+            android:src="@drawable/ic_photos"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No duplicate photos found"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Your photos don't contain any exact duplicates."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <!-- ========================= -->
+    <!-- Clean Selected -->
+    <!-- ========================= -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCleanSelectedDuplicatePhotos"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Clean Selected"
+        android:textAllCaps="false"
+        android:textColor="@color/text_on_primary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

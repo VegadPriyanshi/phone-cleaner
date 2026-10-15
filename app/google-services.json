@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "648563641341",
+    "project_id": "phone-cleaner-5fbe6",
+    "storage_bucket": "phone-cleaner-5fbe6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648563641341:android:f011e081c09467a493e794",
+        "android_client_info": {
+          "package_name": "com.example.phonecleaner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmkSjb4gghGXDLjVxGPUwAC1Rz5o47n6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

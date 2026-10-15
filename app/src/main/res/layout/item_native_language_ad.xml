@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.gms.ads.nativead.NativeAdView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_background"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Ad label -->
+        <TextView
+            android:id="@+id/tvAdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ad"
+            android:textColor="#757575"
+            android:textSize="11sp" />
+
+        <!-- Ad icon and headline -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivAdIcon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvAdHeadline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Main native ad image/video -->
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/adMediaView"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Ad description -->
+        <TextView
+            android:id="@+id/tvAdBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:maxLines="2"
+            android:textColor="#757575"
+            android:textSize="12sp" />
+
+        <!-- Ad action button -->
+        <Button
+            android:id="@+id/btnAdAction"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

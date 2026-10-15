@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="?android:colorBackground">
+
+
+    <!-- ===================================================== -->
+    <!-- Main Root                                             -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:id="@+id/notificationRoot"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <!-- ===================================================== -->
+        <!-- Toolbar                                               -->
+        <!-- ===================================================== -->
+
+        <FrameLayout
+            android:id="@+id/topAppBarContainer"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/colorSurface">
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarNotifications"
+
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+
+                android:background="@android:color/transparent"
+
+                android:gravity="center_vertical"
+
+                android:paddingStart="4dp"
+                android:paddingEnd="8dp"
+
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:navigationIconTint="?attr/colorOnSurface">
+
+
+                <!-- ================================================= -->
+                <!-- Bold Toolbar Title                                -->
+                <!-- ================================================= -->
+
+                <TextView
+                    android:id="@+id/tvToolbarNotificationsTitle"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_marginStart="12dp"
+
+                    android:text="Notifications"
+
+                    android:textColor="?attr/colorOnSurface"
+
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </FrameLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- Content                                               -->
+        <!-- ===================================================== -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+
+            android:clipToPadding="false"
+            android:fillViewport="true"
+
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+                <!-- ================================================= -->
+                <!-- Main Notification Card                           -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardNotificationSettings"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="4dp"
+
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="?attr/colorOutline"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+
+                        android:padding="16dp">
+
+
+                        <!-- ================================================= -->
+                        <!-- Enable Notifications -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="Enable notifications"
+
+                                    android:textColor="?attr/colorOnSurface"
+
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="3dp"
+
+                                    android:text="Allow Phone Cleaner to send notifications"
+
+                                    android:textColor="?attr/colorOnSurfaceVariant"
+
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchEnableNotifications"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- Divider -->
+                        <!-- ================================================= -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:background="?attr/colorOutlineVariant" />
+
+
+                        <!-- ================================================= -->
+                        <!-- Cleaning Reminder -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="center_vertical"
+
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Cleaning reminder"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="3dp"
+
+                                        android:text="Remind me to clean regularly"
+
+                                        android:textColor="?attr/colorOnSurfaceVariant"
+
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+
+                                <com.google.android.material.switchmaterial.SwitchMaterial
+                                    android:id="@+id/switchCleaningReminder"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+
+                            <!-- ================================================= -->
+                            <!-- Cleaning Reminder Options -->
+                            <!-- ================================================= -->
+
+                            <LinearLayout
+                                android:id="@+id/layoutCleaningReminderOptions"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="12dp"
+
+                                android:orientation="vertical"
+
+                                android:visibility="gone">
+
+
+                                <!-- Frequency -->
+
+                                <LinearLayout
+                                    android:id="@+id/rowReminderFrequency"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+
+                                    android:gravity="center_vertical"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="4dp">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_weight="1"
+
+                                        android:text="Frequency"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/valueReminderFrequency"
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Daily"
+
+                                        android:textColor="?attr/colorPrimary"
+
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+
+                                        android:layout_marginStart="4dp"
+
+                                        android:contentDescription="@null"
+
+                                        android:src="@drawable/ic_chevron_right"
+
+                                        app:tint="?attr/colorOnSurfaceVariant" />
+
+                                </LinearLayout>
+
+
+                                <!-- Time -->
+
+                                <LinearLayout
+                                    android:id="@+id/rowReminderTime"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+
+                                    android:gravity="center_vertical"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="4dp">
+
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_weight="1"
+
+                                        android:text="Time"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+                                        android:id="@+id/valueReminderTime"
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="9:00 AM"
+
+                                        android:textColor="?attr/colorPrimary"
+
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+
+                                        android:layout_marginStart="4dp"
+
+                                        android:contentDescription="@null"
+
+                                        android:src="@drawable/ic_chevron_right"
+
+                                        app:tint="?attr/colorOnSurfaceVariant" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- Divider -->
+                        <!-- ================================================= -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:background="?attr/colorOutlineVariant" />
+
+
+                        <!-- ================================================= -->
+                        <!-- Low Storage Alert -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:id="@+id/rowLowStorageAlert"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="Low storage alert"
+
+                                    android:textColor="?attr/colorOnSurface"
+
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="3dp"
+
+                                    android:text="Get notified before space runs out"
+
+                                    android:textColor="?attr/colorOnSurfaceVariant"
+
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchLowStorage"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+
+                        <!-- ================================================= -->
+                        <!-- Divider -->
+                        <!-- ================================================= -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:background="?attr/colorOutlineVariant" />
+
+
+                        <!-- ================================================= -->
+                        <!-- Unused Apps Reminder -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="Unused apps reminder"
+
+                                    android:textColor="?attr/colorOnSurface"
+
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="3dp"
+
+                                    android:text="Remind me about apps I rarely use"
+
+                                    android:textColor="?attr/colorOnSurfaceVariant"
+
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchUnusedApps"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

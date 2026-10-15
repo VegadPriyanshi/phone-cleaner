@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="76dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- File icon -->
+        <ImageView
+            android:id="@+id/ivJunkFileIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_junk_file_icon"
+            android:padding="9dp"
+            android:src="@drawable/ic_description"
+            android:contentDescription="Junk file" />
+
+        <!-- File information -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvJunkFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="middle"
+                android:text="temporary_file.tmp"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvJunkFileDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:text="1.2 MB"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Selection checkbox -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkJunkFile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:buttonTint="@color/primary"
+            android:contentDescription="Select junk file" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

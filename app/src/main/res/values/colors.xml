@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- ================================================= -->
+    <!-- Basic -->
+    <!-- ================================================= -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- ================================================= -->
+    <!-- Primary -->
+    <!-- ================================================= -->
+
+    <color name="primary">#6C4DFF</color>
+    <color name="primary_dark">#5236D6</color>
+    <color name="primary_light">#EEE9FF</color>
+    <color name="accent">#FF5FA2</color>
+
+
+    <!-- ================================================= -->
+    <!-- Main surfaces -->
+    <!-- ================================================= -->
+
+    <color name="screen_background">#F8F7FC</color>
+    <color name="surface">#FFFFFF</color>
+
+
+    <!-- ================================================= -->
+    <!-- Text -->
+    <!-- ================================================= -->
+
+    <color name="text_primary">#17151F</color>
+    <color name="text_secondary">#77727F</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+
+    <!-- ================================================= -->
+    <!-- Bottom navigation -->
+    <!-- ================================================= -->
+
+    <color name="bottom_nav_selected">#6C4DFF</color>
+    <color name="bottom_nav_unselected">#85808D</color>
+
+
+    <!-- ================================================= -->
+    <!-- Settings cards - Light -->
+    <!-- ================================================= -->
+
+    <color name="settings_general_card">#FFFFFF</color>
+    <color name="settings_general_icon">#EEEAFE</color>
+
+    <color name="settings_notifications_card">#FFF5F7</color>
+    <color name="settings_notifications_icon">#FFE4EA</color>
+
+    <color name="settings_appearance_card">#F2EEFF</color>
+    <color name="settings_appearance_icon">#E4DCFF</color>
+
+    <color name="settings_cleaning_card">#EEF8FF</color>
+    <color name="settings_cleaning_icon">#DDF0FF</color>
+
+    <color name="settings_about_card">#FFF8EC</color>
+    <color name="settings_about_icon">#FFF0D2</color>
+
+    <color name="settings_privacy_card">#F1F8F3</color>
+    <color name="settings_privacy_icon">#DFF2E5</color>
+
+    <color name="settings_stroke">#E1DDF2</color>
+
+
+    <!-- Clean screen -->
+    <color name="clean_ready_card">#FFFFFF</color>
+    <color name="clean_ready_stroke">#D9D5FF</color>
+    <color name="clean_primary_button">#5D5FEF</color>
+    <color name="clean_secondary_button">#FFFFFF</color>
+
+    <!-- Apps screen -->
+    <color name="apps_usage_card">#F7F3FF</color>
+    <color name="apps_usage_stroke">#E5DCFF</color>
+    <color name="apps_primary_button">#7655F6</color>
+
+    <color name="apps_filter_background">#F0EBFF</color>
+    <color name="apps_filter_text">#7655F6</color>
+    <color name="apps_filter_stroke">#DDD2FF</color>
+
+    <color name="apps_item_card">#FFFFFF</color>
+    <color name="apps_item_stroke">#EAE7F2</color>
+    <color name="apps_item_arrow">#9A96A3</color>
+    <color name="language_overlay">#CCFFFFFF</color>
+
+
+    <color name="permission_switch_thumb">#FFFFFF</color>
+    <color name="permission_switch_track">#5B4AA8</color>
+
+    <!-- Low storage alert -->
+    <color name="low_storage_red">#E5484D</color>
+    <color name="low_storage_alert_tint">#FFE4EA</color>
+
+</resources>

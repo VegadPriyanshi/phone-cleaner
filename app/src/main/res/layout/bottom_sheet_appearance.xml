@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface"
+    android:paddingStart="22dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="22dp"
+    android:paddingBottom="24dp">
+
+    <!-- Drag handle -->
+
+    <View
+        android:layout_width="42dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/text_secondary" />
+
+
+    <!-- Title -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appearance"
+        android:textColor="@color/text_primary"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Choose your preferred theme."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+
+    <!-- Light -->
+
+    <LinearLayout
+        android:id="@+id/cardThemeLight"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Light"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioThemeLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:clickable="false"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+
+    <!-- Dark -->
+
+    <LinearLayout
+        android:id="@+id/cardThemeDark"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dark"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioThemeDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:clickable="false"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+
+    <!-- System Default -->
+
+    <LinearLayout
+        android:id="@+id/cardThemeSystem"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="System default"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioThemeSystem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:clickable="false"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+</LinearLayout>

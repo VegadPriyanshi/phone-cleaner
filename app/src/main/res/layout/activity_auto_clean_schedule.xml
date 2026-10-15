@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/screen_background">
+
+
+    <!-- ========================================================= -->
+    <!-- Header -->
+    <!-- ========================================================= -->
+
+    <ImageView
+        android:id="@+id/btnBack"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+
+        android:background="?attr/selectableItemBackgroundBorderless"
+
+        android:contentDescription="Back"
+
+        android:padding="8dp"
+
+        android:src="@drawable/ic_arrow_back"
+
+        app:tint="@color/text_primary"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="Auto-clean schedule"
+
+        android:textColor="@color/text_primary"
+
+        android:textSize="23sp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+
+    <!-- ========================================================= -->
+    <!-- Content -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="16dp"
+
+        android:clipToPadding="false"
+
+        android:fillViewport="true"
+
+        android:paddingBottom="32dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="32dp">
+
+
+            <!-- ================================================= -->
+            <!-- Description -->
+            <!-- ================================================= -->
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Automatically clean safe temporary files on a schedule."
+
+                android:textColor="@color/text_secondary"
+
+                android:textSize="13sp" />
+
+
+            <!-- ================================================= -->
+            <!-- Auto-clean -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/settings_stroke"
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="14dp">
+
+
+                    <!-- Icon -->
+
+                    <TextView
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon"
+
+                        android:gravity="center"
+
+                        android:text="↻"
+
+                        android:textColor="@color/primary"
+
+                        android:textSize="20sp" />
+
+
+                    <!-- Text -->
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Auto-clean"
+
+                            android:textColor="@color/text_primary"
+
+                            android:textSize="14sp"
+
+                            android:textStyle="bold" />
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="2dp"
+
+                            android:text="Automatically clean safe files"
+
+                            android:textColor="@color/text_secondary"
+
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- Switch -->
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+
+                        android:id="@+id/switchAutoClean"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:checked="false"
+
+                        app:thumbTint="@color/primary"
+
+                        app:trackTint="@color/settings_stroke" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- Frequency -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/frequencyContainer"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                app:cardBackgroundColor="@color/surface"
+
+                app:cardCornerRadius="18dp"
+
+                app:cardElevation="0dp"
+
+                app:strokeColor="@color/settings_stroke"
+
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+
+                    android:padding="14dp">
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Frequency"
+
+                        android:textColor="@color/text_primary"
+
+                        android:textSize="14sp"
+
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+
+                        android:id="@+id/radioGroupFrequency"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="6dp">
+
+
+                        <RadioButton
+
+                            android:id="@+id/rbEveryDay"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:minHeight="48dp"
+
+                            android:text="Every day"
+
+                            android:textColor="@color/text_primary"
+
+                            android:textSize="14sp"
+
+                            app:buttonTint="@color/primary" />
+
+
+                        <RadioButton
+
+                            android:id="@+id/rbEveryThreeDays"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:minHeight="48dp"
+
+                            android:text="Every 3 days"
+
+                            android:textColor="@color/text_primary"
+
+                            android:textSize="14sp"
+
+                            app:buttonTint="@color/primary" />
+
+
+                        <RadioButton
+
+                            android:id="@+id/rbEveryWeek"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:minHeight="48dp"
+
+                            android:text="Every week"
+
+                            android:textColor="@color/text_primary"
+
+                            android:textSize="14sp"
+
+                            app:buttonTint="@color/primary" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- Clean Time -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:id="@+id/rowTime"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                android:clickable="true"
+                android:focusable="true"
+
+                app:cardBackgroundColor="@color/surface"
+
+                app:cardCornerRadius="18dp"
+
+                app:cardElevation="0dp"
+
+                app:strokeColor="@color/settings_stroke"
+
+                app:strokeWidth="1dp">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+
+                    android:padding="14dp">
+
+
+                    <!-- Icon -->
+
+                    <TextView
+
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+
+                        android:background="@color/settings_general_icon"
+
+                        android:gravity="center"
+
+                        android:text="◷"
+
+                        android:textColor="@color/primary"
+
+                        android:textSize="20sp" />
+
+
+                    <!-- Text -->
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+
+                            android:id="@+id/tvTimeLabel"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Clean time"
+
+                            android:textColor="@color/text_primary"
+
+                            android:textSize="14sp"
+
+                            android:textStyle="bold" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvSelectedTime"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="2dp"
+
+                            android:text="10:00 PM"
+
+                            android:textColor="@color/text_secondary"
+
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <!-- Arrow -->
+
+                    <ImageView
+
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+
+                        android:contentDescription="@null"
+
+                        android:src="@drawable/ic_arrow_forward"
+
+                        app:tint="@color/text_secondary" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- ================================================= -->
+            <!-- Save -->
+            <!-- ================================================= -->
+
+            <com.google.android.material.button.MaterialButton
+
+                android:id="@+id/btnSave"
+
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+
+                android:layout_marginTop="20dp"
+
+                android:text="Save schedule"
+
+                android:textAllCaps="false"
+
+                android:textColor="@android:color/white"
+
+                android:textSize="14sp"
+
+                android:textStyle="bold"
+
+                app:backgroundTint="@color/primary"
+
+                app:cornerRadius="16dp" />
+
+
+            <!-- ================================================= -->
+            <!-- Safety Information -->
+            <!-- ================================================= -->
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+
+                android:gravity="center"
+
+                android:text="Only safe temporary and unnecessary files will be considered for automatic cleaning."
+
+                android:textColor="@color/text_secondary"
+
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

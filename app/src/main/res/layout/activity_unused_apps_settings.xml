@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- ================================================= -->
+        <!-- Toolbar -->
+        <!-- ================================================= -->
+
+        <FrameLayout
+            android:id="@+id/topAppBarContainer"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/colorSurface">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbarUnusedApps"
+
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+
+                android:background="@android:color/transparent"
+
+                android:paddingStart="4dp"
+                android:paddingEnd="8dp"
+
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:navigationIconTint="?attr/colorOnSurface"
+
+                app:title="Unused Apps Reminder"
+                app:titleTextColor="?attr/colorOnSurface" />
+
+        </FrameLayout>
+
+
+        <!-- ================================================= -->
+        <!-- Content -->
+        <!-- ================================================= -->
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_weight="1"
+
+            android:clipToPadding="false"
+            android:fillViewport="true"
+
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="28dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+                <!-- ================================================= -->
+                <!-- Header -->
+                <!-- ================================================= -->
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.card.MaterialCardView
+
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp"
+
+                        app:strokeColor="?attr/colorOutline"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+
+                            android:layout_gravity="center"
+
+                            android:contentDescription="@null"
+
+                            android:src="@android:drawable/ic_menu_manage"
+
+                            app:tint="?attr/colorPrimary" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="14dp"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:text="Unused apps"
+
+                            android:textColor="?attr/colorOnSurface"
+
+                            android:textSize="22sp"
+
+                            android:textStyle="bold" />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+
+                            android:text="Get reminded about apps you rarely use."
+
+                            android:textColor="?attr/colorOnSurfaceVariant"
+
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- ================================================= -->
+                <!-- Main Settings Card -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="20dp"
+
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="?attr/colorOutline"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+
+                        android:padding="16dp">
+
+
+                        <!-- ================================================= -->
+                        <!-- Main Switch -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="Unused apps reminder"
+
+                                    android:textColor="?attr/colorOnSurface"
+
+                                    android:textSize="16sp"
+
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="3dp"
+
+                                    android:text="Remind me when apps haven't been used for a while"
+
+                                    android:textColor="?attr/colorOnSurfaceVariant"
+
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+
+                                android:id="@+id/switchUnusedApps"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:checked="false" />
+
+                        </LinearLayout>
+
+
+                        <View
+
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="4dp"
+
+                            android:background="?attr/colorOutlineVariant" />
+
+
+                        <!-- ================================================= -->
+                        <!-- Options -->
+                        <!-- ================================================= -->
+
+                        <LinearLayout
+
+                            android:id="@+id/layoutUnusedOptions"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical">
+
+
+                            <!-- ================================================= -->
+                            <!-- Unused for -->
+                            <!-- ================================================= -->
+
+                            <LinearLayout
+
+                                android:id="@+id/rowUnusedDays"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+
+                                android:gravity="center_vertical"
+
+                                android:orientation="horizontal"
+
+                                android:paddingStart="4dp"
+                                android:paddingEnd="0dp">
+
+
+                                <LinearLayout
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Unused for"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="2dp"
+
+                                        android:text="How long an app must be unused"
+
+                                        android:textColor="?attr/colorOnSurfaceVariant"
+
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+
+                                    android:id="@+id/valueUnusedDays"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="60 days"
+
+                                    android:textColor="?attr/colorPrimary"
+
+                                    android:textSize="14sp"
+
+                                    android:textStyle="bold" />
+
+
+                                <ImageView
+
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+
+                                    android:layout_marginStart="4dp"
+
+                                    android:contentDescription="@null"
+
+                                    android:src="@drawable/ic_chevron_right"
+
+                                    app:tint="?attr/colorOnSurfaceVariant" />
+
+                            </LinearLayout>
+
+
+                            <!-- ================================================= -->
+                            <!-- Check Frequency -->
+                            <!-- ================================================= -->
+
+                            <LinearLayout
+
+                                android:id="@+id/rowUnusedFrequency"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+
+                                android:gravity="center_vertical"
+
+                                android:orientation="horizontal"
+
+                                android:paddingStart="4dp"
+                                android:paddingEnd="0dp">
+
+
+                                <LinearLayout
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Check frequency"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="2dp"
+
+                                        android:text="How often Phone Cleaner checks"
+
+                                        android:textColor="?attr/colorOnSurfaceVariant"
+
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+
+                                    android:id="@+id/valueUnusedFrequency"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="Weekly"
+
+                                    android:textColor="?attr/colorPrimary"
+
+                                    android:textSize="14sp"
+
+                                    android:textStyle="bold" />
+
+
+                                <ImageView
+
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+
+                                    android:layout_marginStart="4dp"
+
+                                    android:contentDescription="@null"
+
+                                    android:src="@drawable/ic_chevron_right"
+
+                                    app:tint="?attr/colorOnSurfaceVariant" />
+
+                            </LinearLayout>
+
+
+                            <!-- ================================================= -->
+                            <!-- Reminder Time -->
+                            <!-- ================================================= -->
+
+                            <LinearLayout
+
+                                android:id="@+id/rowUnusedTime"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="58dp"
+
+                                android:gravity="center_vertical"
+
+                                android:orientation="horizontal"
+
+                                android:paddingStart="4dp"
+                                android:paddingEnd="0dp">
+
+
+                                <LinearLayout
+
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_weight="1"
+
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Reminder time"
+
+                                        android:textColor="?attr/colorOnSurface"
+
+                                        android:textSize="14sp" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_marginTop="2dp"
+
+                                        android:text="When the reminder can appear"
+
+                                        android:textColor="?attr/colorOnSurfaceVariant"
+
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+
+                                <TextView
+
+                                    android:id="@+id/valueUnusedTime"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text="9:00 AM"
+
+                                    android:textColor="?attr/colorPrimary"
+
+                                    android:textSize="14sp"
+
+                                    android:textStyle="bold" />
+
+
+                                <ImageView
+
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+
+                                    android:layout_marginStart="4dp"
+
+                                    android:contentDescription="@null"
+
+                                    android:src="@drawable/ic_chevron_right"
+
+                                    app:tint="?attr/colorOnSurfaceVariant" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- ================================================= -->
+                <!-- Usage Access Card -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="14dp"
+
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="?attr/colorOutline"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal"
+
+                        android:padding="14dp">
+
+
+                        <ImageView
+
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+
+                            android:contentDescription="@null"
+
+                            android:src="@android:drawable/ic_menu_manage"
+
+                            app:tint="?attr/colorPrimary" />
+
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="12dp"
+
+                            android:layout_weight="1"
+
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Usage Access"
+
+                                android:textColor="?attr/colorOnSurface"
+
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+
+
+                            <TextView
+
+                                android:id="@+id/tvUsageAccessStatus"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="2dp"
+
+                                android:text="Checking usage access..."
+
+                                android:textColor="?attr/colorOnSurfaceVariant"
+
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.button.MaterialButton
+
+                            android:id="@+id/btnUsageAccess"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+
+                            android:text="Allow access"
+
+                            android:textSize="12sp"
+
+                            app:cornerRadius="12dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- ================================================= -->
+                <!-- Current Check Card -->
+                <!-- ================================================= -->
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:id="@+id/cardCurrentCheck"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="14dp"
+
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+
+                    app:strokeColor="?attr/colorOutline"
+                    app:strokeWidth="1dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+
+                        android:padding="16dp">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:text="Current check"
+
+                            android:textColor="?attr/colorOnSurface"
+
+                            android:textSize="14sp"
+
+                            android:textStyle="bold" />
+
+
+                        <TextView
+
+                            android:id="@+id/tvUnusedCount"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="6dp"
+
+                            android:text="Usage Access is required"
+
+                            android:textColor="?attr/colorPrimary"
+
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="4dp"
+
+                            android:text="Phone Cleaner will only remind you. It will never uninstall an app automatically."
+
+                            android:textColor="?attr/colorOnSurfaceVariant"
+
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

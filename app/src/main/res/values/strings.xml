@@ -1,0 +1,87 @@
+<resources>
+
+    <string name="app_name">Phone Cleaner</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_clean">Clean</string>
+    <string name="nav_apps">Apps</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Language -->
+
+    <string name="language_screen_title">Language</string>
+    <string name="language_done">Done</string>
+    <string name="language_downloading">Downloading language…</string>
+
+    <string name="language_download_failed">
+        Unable to download language: %1$s
+    </string>
+
+
+    <string name="auto_clean_schedule_saved">
+    Auto-clean schedule saved
+</string>
+
+    <string name="auto_clean_schedule_disabled">
+    Auto-clean schedule disabled
+</string>
+
+
+    <!-- ========================================================= -->
+    <!-- Onboarding -->
+    <!-- ========================================================= -->
+
+    <string name="onboarding_junk_title">
+    Clean Junk Files
+</string>
+
+    <string name="onboarding_junk_description">
+    Find temporary, empty and unnecessary files that are taking up valuable storage space on your phone.
+</string>
+
+
+    <string name="onboarding_large_title">
+    Find Large Files
+</string>
+
+    <string name="onboarding_large_description">
+    Quickly discover large files, videos and other items using valuable storage so you can decide what to remove.
+</string>
+
+
+    <string name="onboarding_duplicate_title">
+    Clean Duplicate Photos
+</string>
+
+    <string name="onboarding_duplicate_description">
+    Find duplicate and similar photos, review them and remove the copies you no longer need.
+</string>
+
+
+    <string name="onboarding_apps_title">
+    Manage Unused Apps
+</string>
+
+    <string name="onboarding_apps_description">
+    See apps you haven\'t used for a long time, check their storage usage and decide which apps you want to keep or uninstall.
+</string>
+
+
+    <string name="onboarding_control_title">
+    Your Phone, Your Control
+</string>
+
+    <string name="onboarding_control_description">
+    Scan your phone, review the results and choose what you want to clean. You stay in control of every deletion.
+</string>
+
+
+    <string name="onboarding_next">
+    Next
+</string>
+
+    <string name="onboarding_get_started">
+    Get Started
+</string>
+
+</resources>

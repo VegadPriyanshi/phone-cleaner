@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/screen_background"
+
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:paddingStart="18dp"
+        android:paddingTop="32dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="120dp">
+
+
+        <!-- ================================================= -->
+        <!-- Header -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Settings"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+
+            android:text="Manage your Phone Cleaner preferences."
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+
+        <!-- ================================================= -->
+        <!-- General -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGeneral"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="22dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardBackgroundColor="@color/settings_general_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/settings_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:background="@color/settings_general_icon"
+
+                    android:gravity="center"
+
+                    android:text="⚙"
+                    android:textColor="#6C55E8"
+                    android:textSize="23sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="General"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="App preferences"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="›"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- Notifications -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardNotifications"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardBackgroundColor="@color/settings_notifications_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:background="@color/settings_notifications_icon"
+
+                    android:gravity="center"
+
+                    android:text="🔔"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Notifications"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="Cleaning reminders"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="›"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- Appearance -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAppearance"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardBackgroundColor="@color/settings_appearance_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:background="@color/settings_appearance_icon"
+
+                    android:gravity="center"
+
+                    android:text="🎨"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Appearance"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="Theme and display"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="›"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- About -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAbout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardBackgroundColor="@color/settings_about_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:background="@color/settings_about_icon"
+
+                    android:gravity="center"
+
+                    android:text="ⓘ"
+                    android:textColor="#D77A22"
+                    android:textSize="23sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="About Phone Cleaner"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="Version and app information"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="›"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- Privacy -->
+        <!-- ================================================= -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPrivacy"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            app:cardBackgroundColor="@color/settings_privacy_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                android:paddingStart="16dp"
+                android:paddingEnd="14dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+
+                    android:background="@color/settings_privacy_icon"
+
+                    android:gravity="center"
+
+                    android:text="🔒"
+                    android:textSize="20sp" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Privacy Policy"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="2dp"
+
+                        android:text="Your data and privacy"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="›"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ================================================= -->
+        <!-- Version -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            android:gravity="center"
+
+            android:text="Phone Cleaner • Version 1.0"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

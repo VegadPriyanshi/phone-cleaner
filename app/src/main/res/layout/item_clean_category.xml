@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCleanCategory"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:id="@+id/categoryCardContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_quick_junk"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="14dp">
+
+        <!-- Category Icon -->
+
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_junk_files" />
+
+        <!-- Category Information -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junk Files"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCategoryDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="206 items · 1.77 GB"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Arrow -->
+
+        <ImageView
+            android:id="@+id/ivCategoryArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="@color/text_secondary" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
